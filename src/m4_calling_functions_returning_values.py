@@ -189,8 +189,7 @@ def digits_in_cube(n):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ###########################################################################
     # -------------------------------------------------------------------------
-    x = n ** 3
-    return(sum_of_digits(x))
+    return (sum_of_digits(n ** 3))
 
 
 def run_test_digits_in_power():
@@ -206,6 +205,21 @@ def run_test_digits_in_power():
     print('--------------------------------------------------')
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
+    # Test 1:
+    expected = 7
+    answer = digits_in_power(5, 2)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+    # Test 2:
+    expected = 8
+    answer = digits_in_power(5,3)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+    # Test 3:
+    expected = 1
+    answer = digits_in_power(10,3)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
 
 def digits_in_power(n, k):
@@ -227,7 +241,8 @@ def digits_in_power(n, k):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ###########################################################################
     # -------------------------------------------------------------------------
-
+    x = n ** k
+    return(sum_of_digits(x))
 
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
@@ -243,7 +258,21 @@ def run_test_fancy_sums_of_digits():
     print('--------------------------------------------------')
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
-
+    # Test 1:
+    expected = 19084
+    answer = fancy_sums_of_digits(2)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+    # Test 2:
+    expected = 1
+    answer = fancy_sums_of_digits(1)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+    # Test 3:
+    expected = 0
+    answer = fancy_sums_of_digits(0)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
     # -------------------------------------------------------------------------
     # HINT:  For your 1st test, consider  n=10.  Figure out BY HAND
     # the correct (expected) answer for that test case.  (It's easy.)
@@ -285,7 +314,9 @@ def fancy_sums_of_digits(n):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ###########################################################################
     # -------------------------------------------------------------------------
-
+    X = n ** 1000
+    Y = n ** 999
+    return(X ** Y)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
