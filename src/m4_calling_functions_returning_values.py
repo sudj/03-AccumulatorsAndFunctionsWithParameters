@@ -314,9 +314,9 @@ def fancy_sums_of_digits(n):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ###########################################################################
     # -------------------------------------------------------------------------
-    X = n ** 1000
-    Y = n ** 999
-    return(X ** Y)
+    X = sum_of_digits(n ** 1000)
+    Y = sum_of_digits(n ** 999)
+    return (sum_of_digits(X ** Y))
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
